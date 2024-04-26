@@ -1,0 +1,31 @@
+
+<div class="Notification-card">
+    <% events.forEach(event=>{ %>
+        <% if (event.wrap) {%>
+    <div class="event-container">
+        <div class="event-thread event">
+            <img src="<%=event.imageUrl%>" alt="Event Thumbnail"> <!-- Replace with your image source -->
+            <div class="event-info">
+                <div class="basic-info">
+                    <h2><%=event.title%></h2>
+                    <p class="category"><%=event.type%></p>
+                    <p class="date"><%=event.date%></p>
+                    <p class="location"><%=event.venue%></p>
+                    <p class="price"><%=event.price%> Rs.</p>
+                </div>
+                <div class="event-desc">description</div>
+
+            </div>
+            <a  href="/eventWrapUp/analytics/?event=<%event%> "> <button class="edit-button"">more</button></a>
+            
+        </div>
+        <!-- Repeat .event for more events -->
+
+    </div>
+    <%}%>
+    <%})%>
+    
+</div>    
+<a href="/event-add">
+    <button class="add">Add <br> Event</button>
+</a>

@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FullCalendar CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+</head>
+<body>
+    <main>
+        <h1>Event Calendar</h1>
+        <div class="calendar-container">
+            <div class="calendar">
+                <div id="calendar"></div>
+            </div>
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>
+                        <h3>Cerebro</h3>
+                        <p>Date: May 15, 2024</p>
+                        <p>Location: D-Block</p>
+                    </li>
+                    <li>
+                        <h3>Seminar</h3>
+                        <p>Date: June 20, 2024</p>
+                        <p>Location: Auditorium</p>
+                    </li>
+                    <!-- Add more upcoming events here -->
+                </ul><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
+
+                <div class="add-event">
+                    <button><i class="fas fa-plus"></i> Manage Calender</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- FullCalendar JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    {
+                        title: 'Cerebro',
+                        start: '2024-05-15'
+                    },
+                    {
+                        title: 'Seminar',
+                        start: '2024-06-20',
+                        end: '2024-06-22'
+                    }
+                    // Add more events here
+                ]
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>

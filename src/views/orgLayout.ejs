@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+
+    <link rel="stylesheet" href="/css/orgHome.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<body>
+    <main class="main">
+        <div class="Header">
+            <!-- <div class = "logo"><h2>logo</h2></div> -->
+            <a href="/home"><img class="logo" src="./images/whitelogo.png" alt="Logo" href="/home"></a>
+            
+            <div class="page-title">
+                <h2><%- title %></h2>
+            </div>
+            
+                <img class="profile" src="https://cdn-icons-png.flaticon.com/128/847/847969.png" alt="name">
+            
+
+        </div>
+        <div class="body">
+            <span class="left-part">
+                <div class="event-thread left-part-child" >
+                    <a href = "/home" style="text-decoration: none; color: white; display: flex; align-items:center; justify-content:center">
+                        <span><img src="https://cdn-icons-png.flaticon.com/128/1828/1828765.png" alt="icon" style="width:30px; height:30px; margin-right:50px;">
+                        </span>
+                        <p>Dashboard</p></a>
+                </div>
+                <div class="event-thread left-part-child" >
+                    <a href = "/Analytics-bar" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content:space-between;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/11728/11728754.png" alt="icon" style="width:30px; height:30px; margin-right:73px;">
+                        <p>Analytics</p>
+                        
+                    </a>
+                </div>
+                <div class="event-thread left-part-child">
+                    <a href = "/eventWrapUp" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5682/5682602.png" alt="icon" style="width:35px; height:35px; margin-right:25px;">
+                        Event wrap-up
+                    </a>
+                </div>
+                <div class="event-thread left-part-child">
+                    <a href = "/event-calender" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/10092/10092892.png" alt="icon" style="width:30px; height:30px; margin-right:20px;">
+                        Event Calender
+                    </a>
+                </div>
+                <div class="event-thread left-part-child">
+                    <a href = "/event/community" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7080/7080881.png" alt="icon" style="width:50px; height:50px; margin-right:45px;">
+                        Community
+                    </a>
+                </div>
+
+            </span>
+            <span class="right-part">
+                <!-- <div class = "add-event-card">Add New <br> &nbsp; event</div> -->
+                <%- body %>
+                
+            </span>
+        </div>
+        <footer>
+            <div class="contact-container">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+
+                </ul>
+            </div>
+        </footer>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.48.0/apexcharts.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

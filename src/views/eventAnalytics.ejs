@@ -1,0 +1,65 @@
+<div class = "Notification-card">
+  <div class="na-div">
+    <nav>
+      <ul>
+        <li><a href="/Analytics-pie" class="event-thread">Attendee <br> Demographics</a></li>
+        <li><a href="/Analytics-bar" class="event-thread">Engagement <br> Matrices</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+<% if (pie) { %>
+  <div class="container">
+    <div class="chart-card">
+      <h2 class="chart-title">Gender</h2>
+      <div id="pie-chart1"></div>
+
+    </div>
+
+    <div class="chart-card">
+      <h2 class="chart-title">Department</h2>
+      <div id="pie-chart2"></div>
+
+    </div>
+
+    <div class="chart-card">
+      <h2 class="chart-title">Hobbies and Interests</h2>
+      <div id="pie-chart3"></div>
+
+    </div>
+
+  </div>
+<%}else{%>
+
+  
+  <div class="container">
+
+
+
+    <div class="chart-card" style="color: #ffffff;">
+      <div class = "options">
+        <select id="time-period-select">
+          <option value="week">Week</option>
+          <option value="month">Month</option>
+          <option value="year">Year</option>
+        </select>
+      </div>
+      <h2 class="chart-title">Social Media Engagement</h2>
+      <div id="bar-chart1"></div>
+
+    </div>
+
+    <div class="chart-card">
+      <h2 class="chart-title">Public Response</h2>
+      <div id="bar-chart2"></div>
+
+    </div>
+   
+  </div>
+
+  <%}%>
+
+
+
+</div>

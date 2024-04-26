@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <link rel="stylesheet" href="/css/edit.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Event</h1>
+        <form action="/event-edit/<%=event.id %>" method="post">
+            <div class="form-group">
+                <label for="event-title">Event Title</label>
+                <input type="text" id="event-title" name="title" value = "<%= event.title%>" required>
+            </div>
+            <div class="form-group">
+                <label for="event-type">Event Type</label>
+                <select id="event-type" name="type" >
+                        <option value=""><%= event.type %></option>
+                
+                    
+                    <option value="conference">Conference</option>
+                    <option value="seminar">Seminar</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="meetup">Meetup</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="event-date">Date</label>
+                <input type="date" id="event-date" name="date" value = "<%= event.date%>" required>
+            </div>
+            <div class="form-group">
+                <label for="event-Time">Time</label>
+                <input type="time" id="event-Time" name="time" value = "<%= event.time%>" required>
+            </div>
+            <div class="form-group">
+                <label for="event-venue">Venue</label>
+                <input type="text" id="event-venue" name="venue" value = "<%= event.venue%>"required>
+            </div>
+            <div class="form-group">
+                <label for="event-fees">Fees</label>
+                <input type="number" id="event-fees" name="price" min="0" step="0.01" value = "<%= event.fee%>" required>
+            </div>
+            <div class="form-group">
+                <label for="event-description">Event Description</label>
+                <textarea id="event-description" name="desc" required><%= event.desc%></textarea>
+            </div>
+            <div class="form-group">
+                <label for="event-url">Event Poster Url</label>
+                <input type="url" id="event-url" name="imageUrl" value = "<%= event.imageUrl%>">
+            </div>
+            <button type="submit"><%= button %></button>
+        </form>
+    </div>
+</body>
+</html>
